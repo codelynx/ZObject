@@ -161,12 +161,12 @@ open class ZStorage: NSObject {
 	}
 
 	public func insert<T: ZObject>(object: T) throws {
-		typealias T = ZStorage
+		typealias U = ZStorage
 		let data = try! ZObjectKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false, storage: self)
 		let typeString = String(describing: type(of: object))
 		let refcount = 1
 		let query = try self.database.query(
-				"INSERT INTO \(T.objectTableKey) (\(T.typeColumnKey), \(T.dataColumnKey), \(T.refcountKey)) VALUES (?1, ?2, ?3);",
+				"INSERT INTO \(U.objectTableKey) (\(U.typeColumnKey), \(U.dataColumnKey), \(U.refcountKey)) VALUES (?1, ?2, ?3);",
 				typeString, data, refcount)
 		let result = query.step()
 		guard result.done else { throw ZSQLStatus(result)  }
@@ -182,14 +182,14 @@ open class ZStorage: NSObject {
 	}
 
 	public func update<T: ZObject>(object: T) throws {
-		typealias T = ZStorage
+		typealias U = ZStorage
 		assert(object.storage == self)
 		guard object.identifier > 0 else { return }
 		let identifier = object.identifier
 		let data = try! ZObjectKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false, storage: self)
 		let typeString = String(describing: type(of: object))
 		let query = try self.database.query(
-			"UPDATE \(T.objectTableKey) SET \(T.dataColumnKey) = ?1, \(T.typeColumnKey) = ?2  WHERE \(T.idKey) = \(identifier);",
+			"UPDATE \(U.objectTableKey) SET \(U.dataColumnKey) = ?1, \(U.typeColumnKey) = ?2  WHERE \(U.idKey) = \(identifier);",
 			data, typeString)
 		let result = query.step()
 		guard result.done else { throw ZSQLStatus(result) }
@@ -230,11 +230,11 @@ open class ZStorage: NSObject {
 	}
 
 	public func delete<T: ZObject>(object: T) throws {
-		typealias T = ZStorage
+		typealias U = ZStorage
 		guard object.identifier > 0 else { return }
 		let identifier = object.identifier
 		let query = try self.database.query(
-			"DELETE FROM \(T.objectTableKey) WHERE \(T.idKey)=\(identifier);"
+			"DELETE FROM \(U.objectTableKey) WHERE \(U.idKey)=\(identifier);"
 		)
 		let result = query.step()
 		guard result.done else { fatalError() }
