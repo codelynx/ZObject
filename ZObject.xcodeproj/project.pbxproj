@@ -28,6 +28,7 @@
 		CC9B273226EE333100721E87 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B273126EE333100721E87 /* Shape.swift */; };
 		CC9B273426EE338000721E87 /* ZObject_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0B77FB26EDEC1500EC130B /* ZObject_ios.framework */; };
 		CC9B273526EE338000721E87 /* ZObject_ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC0B77FB26EDEC1500EC130B /* ZObject_ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CCCD11AC26F7ABBA0007D359 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CCCD11AB26F7ABBA0007D359 /* README.md */; };
 		CCF72B3026EDEC770093BC37 /* ZObject_mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF72B2726EDEC770093BC37 /* ZObject_mac.framework */; };
 		CCF72B3526EDEC770093BC37 /* ZObject_macTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF72B3426EDEC770093BC37 /* ZObject_macTests.swift */; };
 		CCF72B3726EDEC770093BC37 /* ZObject_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = CCF72B2926EDEC770093BC37 /* ZObject_mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -116,6 +117,7 @@
 		CC9B272B26EE322200721E87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC9B272D26EE322200721E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC9B273126EE333100721E87 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		CCCD11AB26F7ABBA0007D359 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CCF72B2726EDEC770093BC37 /* ZObject_mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZObject_mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF72B2926EDEC770093BC37 /* ZObject_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZObject_mac.h; sourceTree = "<group>"; };
 		CCF72B2A26EDEC770093BC37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		CC0B77EF26EDEBE300EC130B = {
 			isa = PBXGroup;
 			children = (
+				CCCD11AB26F7ABBA0007D359 /* README.md */,
 				CCF72B3E26EDECC70093BC37 /* ZObject */,
 				CC0B77FD26EDEC1500EC130B /* ZObject-ios */,
 				CC0B780826EDEC1500EC130B /* ZObject-iosTests */,
@@ -445,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCCD11AC26F7ABBA0007D359 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

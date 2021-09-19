@@ -1,4 +1,4 @@
-#ZObject
+# ZObject
 
 `ZObject` is an experimental project for me to work on large object data on Apple platform with Swift programmming language.  It is based on Sqlite3 database, and all `ZObject` based objects are lived in sqlute3 database to load and to save.
 
@@ -206,6 +206,18 @@ if let contents = storage.object(for: "main") {
 	...
 }
 ``` 
+
+## Environment
+
+Becuase I was experiencing compiler issue to be filed for this project with Xcode 12.5.1 (12E507), I use Xcode 13.0 beta 5 for this project. 
+
+```
+$ swift --version
+swift-driver version: 1.26.9 Apple Swift version 5.5 (swiftlang-1300.0.29.102 clang-1300.0.28.1)
+Target: arm64-apple-macosx11.0
+
+Xcode Version 13.0 beta 5 (13A5212g)
+```
 
 ## License
 
